@@ -35,7 +35,7 @@ hr{
 }
 .link{
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
 }
 .secondary-link{
     color: var(--primary-color);
@@ -129,3 +129,17 @@ hr{
 .footer ul{
     padding-inline-start: 0;
 }
+
+/* hoisting */
+.hero-hoist{
+    padding:  1rem;
+}
+.hero-hoist .hero-image{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+.hero-hoist .hero-heading{
+    text-align: center;
+}
+
