@@ -19,14 +19,15 @@
         <h1 class="hero-heading">Hoisting</h1>
         <img src="images/hoisting.png" class="hero-image" style="max-width: 600px; padding-top: 1em;">
     </header>
-    <section class="section">
+    <section class="section-hoist">
         <div class="container-center container">
         <p>Conceptually, a strict definition of hoisting means something is moved to the top. but this is not the case in Javascript. What It actually does is that Javascript puts its variable declaration and funtion declaration into memory during compilaton but stay exactly where it is written in the code.</p>
         <p>One of the advantages of Javascript putting its functiona and vaiable declarations into memeory is that it allows you to use the variable and the function before declaring it in your code.</p>
         </div>  
     </section>
-    <section class="section ow">
+    <section class="section-hoist">
         <div class="container container-center">
+            <div class="ow padding">
             <p>
                 function <strong>catName</strong>(name) {
             </p>        
@@ -45,16 +46,18 @@
                 */
             </p>
         </div>
+        </div>
     </section>
-    <section class="section">
+    <section class="section-hoist">
         <div class="container container-center">
             <p>
                 The above code snippet is probably the way we will write our code to make it work. but what if we call the function before its is declared.
             </p>
         </div>
     </section>
-    <section class="section ow">
+    <section class="section-hoist">
         <div class="container container-center">
+            <div class="ow padding">
             <p>
                 <strong>catName</strong>("Chloe");
             </p>
@@ -73,20 +76,58 @@
             */    
             </p>
         </div>
+        </div>
     </section>
-    <section class="section">
+    <section class="section-hoist">
         <div class="container container-center">
             <p>
                 Even though we call the function in our code first before the function is written, the code still works. This is because of <strong>Hoisting</strong>.
             </p>
+            <h3 class="ow padding">Only declarations are hoisted</h3>
+            <p>
+                Javascript only hoists declarations not the initializations, if the varible declared and initialized after using it then the values of that varible will be undefined. 
+            </p>
+        </div>
+    </section>
+    <section class="section-hoist">
+        <div class="container-center container">
+            <div class="ow padding">
+            <p>
+                console.log(<strong>num</strong>); // Returns undefined
+            </p>
+            <p>
+                var <strong>num</strong>; // Declaration
+            </p>
+            <p>
+                <strong>num</strong> = 6; // Initialization
+            </p>
+        </div>
+        </div>
+    </section>
+    <section class="section-hoist">
+        <div class="container-center container">
+            <p>The example below only has initialization but no declaration. No hoisting happens so trying to read the variable results in ReferenceError exception.</p>
+        </div>
+        <div class="container container-center">
+            <div class="ow padding">
+                <p>
+                    console.log(<strong>num</strong>); // Throws ReferenceError exception
+                </p>
+                <p>
+                    <strong>num</strong> = 6; // Initialization
+                </p>
+            </div>
+        </div>
+        <div class="container-center container">
+            
         </div>
     </section>
     <footer class="footer">
         <div class="footer-header">GopalKaran</div>
         <ul>
-            <li class="list-item-inline"><a href="" class="link">Facebook</a></li>
-            <li class="list-item-inline"><a href="" class="link">Youtube</a></li>
-            <li class="list-item-inline"><a href="" class="link">LinkedIn</a></li>
+            <li class="list-item-inline"><a href="https://www.facebook.com" class="link" target="_blank">Facebook</a></li>
+            <li class="list-item-inline"><a href="https://github.com/gopalkaran" class="link" target="_blank">GitHub</a></li>
+            <li class="list-item-inline"><a href="https://www.linkedin.com/in/gopalkaran/" class="link" target="_blank">LinkedIn</a></li>
         </ul>
     </footer>
 </body>

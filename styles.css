@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root{
-    --primary-color: #7C3AED;
+    --primary-color: #4338CA;
     --dark-gray: #6B7280;
     --off-white: #F3F4F6;
 }
@@ -138,8 +138,25 @@ hr{
     display: block;
     margin: auto;
     width: 90%;
+    max-width: 500px;
 }
 .hero-hoist .hero-heading{
     text-align: center;
 }
+.padding{
+    padding: 1rem;
+}
+.section-hoist{
+    padding: 1rem;
+}
+.section-hoist h3{
+    text-align: center;
+}
 
+/* blogs */
+.blog-lists .container{
+    padding: 1rem;
+}
+.blog-lists{
+    padding-inline-start: 0;
+}
