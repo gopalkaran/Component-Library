@@ -74,7 +74,12 @@ hr{
     color: white;
 }
 .navigation .nav-pills{
-    text-align: right;
+    /* text-align: right; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+
 }
 .navigation .link-active{
     font-weight: bold;
