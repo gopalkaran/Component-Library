@@ -181,3 +181,13 @@ hr{
     gap: 0.5rem;
     flex-wrap: wrap;
 }
+
+/* index page */
+.section-heading{
+    color: var(--primary-color);
+}
+.para-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
