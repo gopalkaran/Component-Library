@@ -160,3 +160,12 @@ hr{
 .blog-lists{
     padding-inline-start: 0;
 }
+
+/* projects */
+
+.project-link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
