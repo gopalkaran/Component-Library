@@ -88,12 +88,13 @@ hr{
 /* header */
 .hero{
     padding: 2rem 0;
-    padding-top: 5rem ;
+    /* padding-top: 5rem ; */
 }
 .hero .hero-image{
     max-width: 350px;
     display: block;
     margin: auto;
+    border-radius: 50%;
 }
 .hero .hero-heading{
     color: var(--dark-gray);
