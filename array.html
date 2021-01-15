@@ -28,11 +28,128 @@
     <section class="section-hoist">
         <div class="container container-center">
             <p>
-                
+                Array is a collection of items. Unlike other programming language, array in javascript allow you to have different type of data and also length of the array is not fixed. Since the length of the array is not fixed, data can be stored in non contiguous locations. 
             </p>
+            <p>
+                Array cannot use string as indexes but must use integers. Index in array starts from 0 and goes till n-1 if the array size is n.
+            </p>
+            <p>
+                Array allow to have ordered collection of items which is not the case in case of objects. In case of objects we cannot maintain the order of the items. So we also use array where order is important.
+            </p>
+            <p>
+                There are two syntaxes for creating an empty array:
+            </p>
+            <div class="ow padding">
+                <p>
+                    let <strong>arr</strong> = new Array();
+                </p>        
+                <p>
+                    let <strong>arr</strong> = [];
+                </p>
+            </div>
+            <p>
+                Most of the time we use the second notation.
+            </p>
+            <div class="ow padding">
+                <p>let <strong>fruits</strong> = ["Apple", "Orange", "Plum"];</p>
+            </div>
+            <p>
+                We can access array elements by its index number in square brackets where 0th index will give first array element and (n-1)th element will give last element.
+            </p>
+            <div class="ow padding">
+                <p>
+                    let <strong>fruits</strong> = ["Apple", "Orange", "Plum"];
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>[0] ); // Apple
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>[1] ); // Orange
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>[2] ); // Plum
+                </p>
+            </div>
+            <p>
+                We can replace an array element by simply assigning the element inside square bracket notation.
+            </p>
+            <div class="ow padding">
+                <p>
+                    <strong>fruits</strong>[2] = "Mango" ; 
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>[2] ); // This will now give "Mango" as output
+                </p>
+            </div>
+            <p>
+                We can also add new item in some position by putting index inside bracket notation. 
+            </p>
+            <div class="ow padding">
+                <p>
+                    <strong>fruits</strong>[3] = "Banana" ;
+                </p>
+            </div>
+            <p>
+                We can also show the entire array by putting the array name inside output function
+            </p>
+            <div class="ow padding">
+                <p>
+                    alert( <strong>fruits</strong> ); // ["Apple","Orange","Mango","Banana"]
+                </p>
+            </div>
+            <p>
+                Array in javascript can hold different types of data.
+            </p>
+            <div class="ow padding">
+                <p>
+                    let <strong>Student</strong> = ["Gopal", "CSE", 2015, true] // name, branch, year, boolean
+                </p>
+                <p>
+                    alert( <strong>Student</strong> ); // Output: ["Gopal", "CSE", 2015, true] 
+                </p>
+            </div>
+            <p>
+                There are some in-built functions which can be used on array objects to insert and delete elements from array. two functions push() and pop() through which we can achieve stack on array. push() is used to insert and pop() is used to delete element at the end of the array.
+            </p>
+            <div class="ow padding">
+                <p>
+                    let <strong>fruits</strong> = ["Apple", "Orange", "Pear"];
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>.pop() ); // remove "Pear" and alert it
+                </p>
+                <p>
+                    alert( <strong>fruits</strong> ); // Apple, Orange
+                </p>
+                <p>
+                    <strong>fruits</strong>.push("Mango");
+                </p>
+                <p>
+                    alert( <strong>fruits</strong> ); // Apple, Orange, Mango
+                </p>
+            </div>
+            <p>
+                There are another two functions shift() and unshift() by which we can delete/insert element at the beginning of the array. where shift() is used to extract element from the beginning and unshift() is used to insert element at the beginning. by using shift() and push() we can achieve queue on array.
+            </p>
+            <div class="ow padding">
+                <p>
+                    let <strong>fruits</strong> = ["Apple", "Orange", "Pear"];
+                </p>
+                <p>
+                    alert( <strong>fruits</strong>.shift() ); // remove "Apple" and alert it
+                </p>
+                <p>
+                    alert( <strong>fruits</strong> ); // Orange, Pear
+                </p>
+                <p>
+                    <strong>fruits</strong>.unshift("Mango");
+                </p>
+                <p>
+                    alert( <strong>fruits</strong> ); // Mango, Orange, Pear
+                </p>
+            </div>
 
         </div>
-
     </section>
     <footer class="footer">
         <div class="footer-header">GopalKaran</div>
