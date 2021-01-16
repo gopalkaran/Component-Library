@@ -34,38 +34,38 @@
             So the point of restricting the visibility of the variables and not allowing its availabilty everywhere is that scope provides some level of security. Users should have accesed to only that resource which is necessary for them. Suppose you have a computer which is accessed by many users other than you. lets say you are the administrator, you have full access to the system files, you can read or modify drivers of the system. you should not give access to use the administrator account to other users. They should be given the Guest account so that they can only make changes to a particular things or programs. This way you can save your program or systems from unauthroized access.
         </p>
         <p>
-            Scope also solves the naming problems when we have varibles with the same name but in different scopes.
+            Scope also solves the naming problems when we have variables with the same name but in different scopes.
         </p>
         <p>
-            lets understand scopes by a simples example:
+            lets understand scopes by a simple example:
         </p>
         <div class="ow padding">
             <p>
-                const name="Gopal";
+                const <strong>name</strong>="Gopal";
             </p>
             <p>
-                console.log(name); //Gopal
+                console.log(<strong>name</strong>); //Gopal
             </p>
         </div>
         <p>
-            Here We can easily log this vaiable. but now if we move the varible declaration inside if block.
+            Here We can easily log this variable. but now if we move the variable declaration inside if block.
         </p>
         <div class="ow padding">
             <p>
-                if (true) {
+                if (<strong>true</strong>) {
             </p>
             <p>
-                const name = 'Gopal';
+                const <strong>name</strong> = 'Gopal';
             </p>
             <p>
                 }
             </p>
             <p>
-                console.log(name); // ReferenceError: name is not defined
+                console.log(<strong>name</strong>); // ReferenceError: name is not defined
             </p>
         </div>
         <p>
-            This time when we are trying to log the varible. It gives an ReferenceError : name is not defined. The name varible has scope only within the if block means it is only available inside if block. we cannot acces it outside the if block.
+            This time when we are trying to log the variable. It gives an ReferenceError : name is not defined. The name varible has scope only within the if block means it is only available inside if block. we cannot acces it outside the if block.
         </p>
         <p>
             There are serveral type of scopes in javascript
@@ -81,6 +81,97 @@
             <strong>
                 Block Scope
             </strong>
+        </p>
+        <p>
+            A code block in javascript creates a scope for variables declared using let and const.
+        </p>
+        <div class="ow padding">
+            <p>
+                if (true) {
+            </p>
+            <p>
+                    // "if" block scope
+            </p>
+            <p>
+                    const <strong>name</strong> = 'Gopal';
+            </p>
+            <p>
+                    console.log(<strong>name</strong>); // 'Gopal'
+            </p>
+            <p>
+                  }
+            </p>
+            <p>
+                  console.log(<strong>name</strong>); // throws ReferenceError
+            </p>
+        </div>
+        <p>
+            The first console.log(name) correctly logs the variable 'name' because the name is accesed within its scope.
+        </p>
+        <p>
+            The second console.log(name) throws an error because we are trying to access the variable outside the if block. Const is block scoped.
+        </p>
+        <div class="ow padding">
+            <p style="text-align: center; font-weight: bold;">
+                var is not block scoped
+            </p>
+            <p>
+                if (<strong>true</strong>) {
+            </p>
+            <p>  // "if" block scope </p>
+            <p>
+                var <strong>name</strong> = "Gopal";
+            </p>
+            <p>
+                console.log(<strong>name</strong>); // "Gopal"
+            </p>
+            <p>
+                }
+            </p>
+            <p>
+                console.log(<strong>name</strong>); // "Gopal"
+            </p>
+        </div>
+        <p>
+            <strong>Function Scope</strong>
+        </p>
+        <p>
+            Function in javascript creates scope for variables declared using var, let, const.
+        </p>
+        <div class="ow padding">
+            <p>
+                function <strong>run</strong>() {
+            </p>
+            <p>
+                // "run" function scope
+            </p>
+            <p>
+                var <strong>name</strong> = 'Gopal';
+            </p>
+            <p>
+                console.log(<strong>name</strong>); // 'Gopal'
+            </p>
+            <p>
+                }
+            </p>
+            <p>
+                  
+                <strong>run</strong>();
+            </p>
+            <p>
+                console.log(<strong>name</strong>); // throws ReferenceError
+            </p>
+        </div>
+        <p>
+            The run function creates a scope for the variable name. The variable name is accesible inside the function but inaccessible outside the function. Same works for let and const.
+        </p>
+        <p>
+            <strong>
+                Module Scope
+            </strong>
+        </p>
+        <p>
+            
         </p>
         </div>  
     </section>
