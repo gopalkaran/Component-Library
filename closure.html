@@ -31,7 +31,7 @@
             Before we talk about closure we need to know about scope. Scope is a very important concept that manages the availabilty of the variables, functions and objects in some particular part of your code. In other words, scope determines visibility of the varibles and functions in areas of your code. 
         </p>
         <p>
-            So the point of restricting the visibility of the variables and not allowing its availabilty everywhere is that scope provides some level of security. Users should have accesed to only that resource which is necessary for them. Suppose you have a computer which is accessed by many users other than you. lets say you are the administrator, you have full access to the system files, you can read or modify drivers of the system. you should not give access to use the administrator account to other users. They should be given the Guest account so that they can only make changes to a particular things or programs. This way you can save your program or systems from unauthroized access.
+            So the point of restricting the visibility of the variables and not allowing its availabilty everywhere is that scope provides some level of security. Users should have accesed to only that resource which is necessary for them. Suppose you have a computer which is accessed by many users other than you. lets say you are the administrator, you have full access to the system files, you can read or modify drivers of the system. you should not give access to use the administrator account to other users. They should be given the Guest account so that they can only make changes to a particular things or programs. This way you can save your program or systems from unauthorized access.
         </p>
         <p>
             Scope also solves the naming problems when we have variables with the same name but in different scopes.
@@ -87,7 +87,7 @@
         </p>
         <div class="ow padding">
             <p>
-                if (true) {
+                if (<strong>true</strong>) {
             </p>
             <p>
                     // "if" block scope
@@ -171,8 +171,144 @@
             </strong>
         </p>
         <p>
-            
+            Module also creates scope for variables, functions and classes.
         </p>
+        <p>
+            Let's say a module sayHi.js alerts 'Hello' to the user.
+        </p>
+        <div class="ow padding">
+            <p>
+                // <strong>sayHi.js</strong>
+            </p>
+            <p>
+                function <strong>sayHi</strong>(user){
+            </p>
+            <p>
+                alert(`Hello, ${user}!`)
+            </p>
+            <p>
+                }
+            </p>
+        </div>
+        <p>
+            Another module main.js imports sayHi.js module and uses it.
+        </p>
+        <div class="ow padding">
+            <p>
+                // <strong>main.js</strong>
+            </p>
+            <p>
+                import {<strong>sayHi</strong>} from './sayHi.js';
+            </p>
+            <p>
+                <strong>sayHi</strong>('Gopal'); // throws ReferenceError
+            </p>
+        </div>
+        <p>
+            function sayHi is not accessible outside sayHi module unless explicitly exported using export keyword.
+        </p>
+        <div class="ow padding">
+            <p>
+                // <strong>sayHi.js</strong>
+            </p>
+            <p>
+                export function <strong>sayHi</strong>(user){
+            </p>
+            <p>
+                alert(`Hello, ${user}!`)
+            </p>
+            <p>
+                }
+            </p>
+        </div>
+        <p>
+            Now we can access the sayHi function from another module, simply importing it like the main.js module written above.
+        </p>
+        <p>
+            <strong>Global Scope</strong>
+        </p>
+        <p>
+            If a variable is declared outside all the functions or outside blocks, it is said to be defined in the global scope. Variables in outer scope is accessible from any local scope. A varible declared inside global scope is known as global variable.
+        </p>
+        <div class="ow padding">
+            <p>
+                const <strong>name</strong> = 'Gopal'
+            </p>
+            <p>
+                function <strong>sayHello</strong> () {
+            </p>
+            <p>
+                console.log(<strong>name</strong>)
+            </p>
+            <p>
+                }
+            </p>
+            <p>
+                console.log(<strong>name</strong>) // 'Gopal'
+            </p>
+            <p>
+                <strong>sayHello</strong>() // 'Gopal'
+            </p>
+        </div>
+        <p>
+            Although you can declare variable in global scope but it is not advised. Declaring variables in global scope will create naming collisions when two or more variable have same name.
+        </p>
+        <div class="ow padding">
+            <p>
+                let <strong>name</strong> = 'Gopal'
+            </p>
+            <p>
+                let <strong>name</strong> = 'Gopal Karan' // Error
+            </p>
+        </div>
+        <p>
+            Variables declared using let or const keyword will give an error whenever name collision happens.
+        </p>
+        <div class="ow padding">
+            <p>
+                var <strong>name</strong> = 'Gopal'
+            </p>
+            <p>
+                var <strong>name</strong> = 'Gopal Karan' // will overwrite 'Gopal'
+            </p>
+        </div>
+        <p>
+            Variables declared using var keyword will overwrite the previous value whenever name collision happens.
+        </p>
+        <p>
+            <strong>
+                Lexical Scope
+            </strong>
+        </p>
+        <p>
+            When one function is defined inside another function, inner function can access variables of outer function. This is called nested scope or lexical scope.
+        </p>
+        <div class="ow padding">
+            <p>
+                function <strong>outer</strong> () {
+            </p>
+            <p>        
+                    const <strong>outerVar</strong> = `I'm the outer variable`
+            </p>
+            <p>            
+                    function <strong>inner</strong>() {
+            </p>
+            <p>           
+                      const <strong>innerVar</strong> = `I'm the inner variable`
+            </p>
+            <p>          
+                      console.log(<strong>outerVar</strong>) // I'm the outer variable
+            </p>
+            <p>         
+                    }
+            </p>
+            <p>        
+                    console.log(<strong>innerVar</strong>) // Error, innerVar is not defined
+            </p>
+            <p>        
+                  }
+            </p>
+        </div>
         </div>  
     </section>
 
