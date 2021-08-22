@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Article | Javascript</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="navigation container">
-        <div class="nav-brand">GopalKaran</div>
-        <ul class="list-non-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="/">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link link-active" href="/projects.html">Projects</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="/blogs.html">Blogs</a>
-            </li>
-        </ul>
+      <div class="nav-brand">GopalKaran</div>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link" href="/">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="/projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="/blogs.html">Blogs</a>
+        </li>
+      </ul>
     </nav>
     <header class="hero-hoist">
-        <h1 class="hero-heading">Function</h1>
-        <img class="hero-image" src="/images/function.png">
+      <h1 class="hero-heading">Function</h1>
+      <img class="hero-image" src="/images/function.png" alt="function" />
     </header>
     <section class="section-hoist">
-        <div class="container container-center">
-            <p>
-                Function is the one of the functional building blocks in Javascript. Function is nothing but a procedure. A procedure is set of statements to perform a certain tasks. But for a procedure to qualify as function, it should take some input and gives some output.
-            </p>
-            <p>
-                Function definition consists of a function keyword followed by:
-            </p>
-            <ul>
-                <li>function name.</li>
-                <li>A list of parameters to the function.</li>
-                <li>Javascript statements that define the function, enclosed in curly brackets.</li>
-            </ul>
-            <p>
-                The following code defines a simple function:
-            </p>
-            <div class="ow padding">
-                <p>
-                    function square(<strong>number</strong>) {
-                </p>
-                <p>
-                    return <strong>number</strong> * <strong>number</strong>;
-                </p>
-                <p>
-                    }
-                </p>
-            </div>
-            <p>The above function takes one parameter <strong>number</strong>. It consists of one statement that returns the parameter of the function multiplied by itself</p>
-            <p>Primitive parameters(such as number) are passed to functions by value, the value is passed to the function, if the function changes the value of the parameter, this changes not relfected globally or in the calling function</p>
-            <p>But if an object is passed as a parameter and the function changes object's property, that change is visible outside the function, as shown in the following example</p>
-            <div class="ow padding">
-                <p>
-                    function <strong>myFunc</strong>(theObject) {
-                </p>
-                <p>
-                    theObject.make = 'Toyota';
-                </p>
-                <p>
-                    }
-                </p>
-                <p>
-                    var mycar = {make: 'Honda', model: 'Accord', year: 1998};
-                </p>
-                <p>
-                    var x, y;
-                </p>
-                <p>
-                    x = mycar.make; // x gets the value "Honda"
-                </p>
-                <p>
-                    <strong>myFunc</strong>(mycar);
-                </p>
-                <p>
-                    y = mycar.make; // y gets the value "Toyota"
-                </p>
-            </div>
+      <div class="container container-center">
+        <p>
+          Function is the one of the functional building blocks in Javascript.
+          Function is nothing but a procedure. A procedure is set of statements
+          to perform a certain tasks. But for a procedure to qualify as
+          function, it should take some input and gives some output.
+        </p>
+        <p>Function definition consists of a function keyword followed by:</p>
+        <ul>
+          <li>function name.</li>
+          <li>A list of parameters to the function.</li>
+          <li>
+            Javascript statements that define the function, enclosed in curly
+            brackets.
+          </li>
+        </ul>
+        <p>The following code defines a simple function:</p>
+        <div class="ow padding">
+          <p>function square(<strong>number</strong>) {</p>
+          <p>return <strong>number</strong> * <strong>number</strong>;</p>
+          <p>}</p>
         </div>
+        <p>
+          The above function takes one parameter <strong>number</strong>. It
+          consists of one statement that returns the parameter of the function
+          multiplied by itself
+        </p>
+        <p>
+          Primitive parameters(such as number) are passed to functions by value,
+          the value is passed to the function, if the function changes the value
+          of the parameter, this changes not relfected globally or in the
+          calling function
+        </p>
+        <p>
+          But if an object is passed as a parameter and the function changes
+          object's property, that change is visible outside the function, as
+          shown in the following example
+        </p>
+        <div class="ow padding">
+          <p>function <strong>myFunc</strong>(theObject) {</p>
+          <p>theObject.make = 'Toyota';</p>
+          <p>}</p>
+          <p>var mycar = {make: 'Honda', model: 'Accord', year: 1998};</p>
+          <p>var x, y;</p>
+          <p>x = mycar.make; // x gets the value "Honda"</p>
+          <p><strong>myFunc</strong>(mycar);</p>
+          <p>y = mycar.make; // y gets the value "Toyota"</p>
+        </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="footer-header">GopalKaran</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline"><a class="link" href="https://www.facebook.com" target="_blank">Facebook</a></li>
-            <li class="list-item-inline"><a class="link" href="https://github.com/gopalkaran" target="_blank">GitHub</a></li>
-            <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/gopalkaran/" target="_blank">LinkedIn</a></li>
-        </ul>
+      <div class="footer-header">GopalKaran</div>
+      <ul class="social-links list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://www.facebook.com" target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/gopalkaran" target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/gopalkaran/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
     </footer>
-</body>
+  </body>
 </html>
